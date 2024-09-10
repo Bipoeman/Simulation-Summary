@@ -258,12 +258,12 @@ wait_us(us);
   <figcaption>ใช้ Opto เป็น Input ก็ได้</figcaption>
 </figure>
 <h2 id="7-segment">7-Segment</h2>
-<p>ตัวเลข ที่เราคุ้นเคย ใน example ใช้ <code>BusOut</code> แต่ต้องโน้ตไว้อย่างนึงว่า Ouput Pin แต่ละ Pin มีค่าความต้านทานภายใน 100Ω และ LED Segment มีแรงดันตกคร่อมประมาณ 1.8V เพราะงั้นเวลาคำนวนกระแสต้องคิดค่า R ภายในด้วยเช่นถ้า </br>
-I = 5mA </br>
-Vled = 1.8V </br>
-Vpin = 3.3V </br>
-Rinternal = 100Ω</br>
-ดังนั้น R จะเท่ากับ ((3.3 - 1.8) / 5m) - 100 = ___Ω</p>
+<p>ตัวเลข ที่เราคุ้นเคย ใน example ใช้ <code>BusOut</code> แต่ต้องโน้ตไว้อย่างนึงว่า Ouput Pin แต่ละ Pin มีค่าความต้านทานภายใน 100Ω และ LED Segment มีแรงดันตกคร่อมประมาณ 1.8V เพราะงั้นเวลาคำนวนกระแสต้องคิดค่า R ภายในด้วยเช่นถ้า </br></p>
+<p><span class="arithmatex">\(I = 4mA\)</span></p>
+<p><span class="arithmatex">\(V_{led} = 1.8V\)</span></p>
+<p><span class="arithmatex">\(V_{pin} = 3.3V\)</span></p>
+<p><span class="arithmatex">\(R_{internal} = 100Ω\)</span></p>
+<p>ดังนั้น R จะเท่ากับ <span class="arithmatex">\(\dfrac{3.3 - 1.8}{4m} - 100 = 275Ω\)</span></p>
 <pre><code class="language-C">/*Program Example 3.7: Simple demonstration of 7-segment display. Display
 digits 0, 1, 2, 3 in turn.
 */
