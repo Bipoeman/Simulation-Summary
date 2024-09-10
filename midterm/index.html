@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Midterm - Embed Midterm</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Embed Midterm</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#embeded-system-midterm" class="nav-link">Embeded System Midterm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-1-embeded-mcu-and-arm" class="nav-link">Chapter 1 : Embeded, MCU and ARM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-2-introducing-to-mbed" class="nav-link">Chapter 2 : Introducing to MBED</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#mbed-board-architecture" class="nav-link">MBED Board Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-3-digital-io" class="nav-link">Chapter 3 : Digital IO</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#leds" class="nav-link">ว่าด้วยเรื่องของ LEDs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#switch-input" class="nav-link">ว่าด้วยเรื่องการต่อ Switch Input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-segment" class="nav-link">7-Segment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#control-larger-load" class="nav-link">Control Larger Load</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-4-analog-output" class="nav-link">Chapter 4 : Analog Output</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#pwm-pulse-width-modulation" class="nav-link">PWM (Pulse Width Modulation)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#servo-control" class="nav-link">Servo Control</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-5-analog-input" class="nav-link">Chapter 5 : Analog Input</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#adc-analog-to-digital-converter" class="nav-link">ADC (Analog to Digital Converter)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#daq-data-acquisition-system" class="nav-link">DAQ (Data Acquisition System)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sampling-frequency-and-aliasing" class="nav-link">Sampling Frequency and Aliasing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#analog-input-with-mbed" class="nav-link">Analog Input with mbed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#display-value-to-the-computer" class="nav-link">Display Value to the computer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#simple-analog-sensor" class="nav-link">Simple Analog sensor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#chapter-7-serial-communication" class="nav-link">Chapter 7 Serial Communication</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#spi-serial-peripheral-interface" class="nav-link">SPI (Serial Peripheral Interface)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#i2c-inter-integrated-circuit" class="nav-link">I2C (Inter-Integrated Circuit)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#asynchronous-serial" class="nav-link">Asynchronous Serial</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#usb-universal-serial-bus" class="nav-link">USB (Universal Serial Bus)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="embeded-system-midterm">Embeded System Midterm</h1>
+<h1 id="chapter-1-embeded-mcu-and-arm">Chapter 1 : Embeded, MCU and ARM</h1>
+<p><strong>Embeded system</strong> คือ Product Controlled by Computer for Example</p>
+<ul>
+<li>Vending Machine</li>
+<li>Washing Machine</li>
+<li>Segway personal transporter</li>
+</ul>
+<p><strong>MPU vs MCU</strong>
+MPU ไม่พูดถึงแต่ MCU คือ Computer + Control Functions ประกอบด้วย</p>
+<ul>
+<li>Core</li>
+<li>Memory</li>
+<li>Peripheral</li>
+</ul>
+<p><strong>Embeded uses C or C++</strong>
+<strong>ARM (Advance RISC Machine Ltd.)</strong> เจ้านี้ขาย Processor IP แบบ RISC (Reduced Instruction Set Computer) 
+มีข้อดีเรื่อง</p>
+<ul>
+<li>1 binary word instruction</li>
+<li>instruction takes same amout of time</li>
+<li>Piplining</li>
+</ul>
+<h1 id="chapter-2-introducing-to-mbed">Chapter 2 : Introducing to MBED</h1>
+<figure>
+  <img align="center" alt="Image title" src="../images/mbed-lpc1768.jpg" width="300" />
+  <figcaption>ไอบอร์ดเวร</figcaption>
+</figure>
+<p><strong>MBED LPC1768</strong> เป็น MCU ที่ต่ออุปกรณ์เสริมมาเรียบร้อยแล้ว (เรียกได้ว่าพร้อมใช้)</p>
+<h2 id="mbed-board-architecture">MBED Board Architecture</h2>
+<ul>
+<li>LPC1768 MCU</li>
+<li>Signal Pins</li>
+<li>USB Interface MCU</li>
+<li>16Mbit USB Disk (เอาง่ายๆ จะอัพโค้ดแบบปกติ หรือว่าจะเอา Compiled ใส่ USB Disk ก็ได้)</li>
+</ul>
+<figure>
+  <img alt="MCU Architecture" src="../images/LPC_Sturcture.png" width="500" />
+  <figcaption>โครงสร้างการทำงานภายใน แต่ไม่ต้องไปจำแม่งหรอกครับ</figcaption>
+</figure>
+<pre><code class="language-C">/* Program Example 2.1: Simple LED flashing */
+#include &quot;mbed.h&quot;
+DigitalOut myled(LED1);
+int main() {
+    while(1) {
+        myled = 1;
+        wait(0.2);
+        myled = 0;
+        wait(0.2);
+    }
+}
+</code></pre>
+<h1 id="chapter-3-digital-io">Chapter 3 : Digital IO</h1>
+<p>ไอบอดเวรนี่มี 26 Pin ที่ใช้เป็น Input และ Output ได้ ก็คือตั้งแต่ Pin 5-30</p>
+<!-- 
+Built-in
+    LED
+    Button
+ -->
+<p>โค้ดมีตามนี้</p>
+<pre><code class="language-C">#include &lt;mbed.h&gt; // ก่อนใช้ก็ Include ก่อน
+/** Digital IO */
+DigitalOut myLED(LED1);
+DigitalIn myButton(btn1);
+BusIn busInput(P0,P1,P2); // ใช้หลาย Input Pin พร้อมกัน Up to 16 pins
+// ตอนรับค่ารับเป็น int ที่แต่ละ bit represent แต่ละ pin
+BusOut busOutput(P0,P1,P2) // ใช้หลาย Output Pin พร้อมกัน  Up to 16 pins
+// ตอนสั่งจะสั่งเป็น int ที่แต่ละ bit represent แต่ละ pin
+wait(s);
+wait_ms(ms);
+wait_us(us);
+</code></pre>
+<figure>
+  <img alt="MCU Architecture" src="../images/VoltageLogic.png" width="500" />
+  <figcaption>Voltage as Logic values</figcaption>
+</figure>
+<p>(GPIO ของชิพจริงไม่มี State Undefined นะครับ)</p>
+<h2 id="leds"><strong>ว่าด้วยเรื่องของ LEDs</strong></h2>
+<p>สรุปง่ายๆ คือ LED มันรับ<strong>กระแส</strong>ได้จำกัดซึ่งถ้าเราจ่ายแรงดันมากเกินไปอาจะทำให้กระแสไหลเกินจน LED ขาดได้</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/LED.png" width="500" />
+  <figcaption>การจ่ายกระแสให้ LED</figcaption>
+</figure>
+<p>มันมีอยู่ 2 แบบคือ </p>
+<ol>
+<li>Source จะจ่ายออกจากขา IO </li>
+<li>Sink จะดึงกระแสเข้ามาในขา IO</li>
+</ol>
+<h2 id="switch-input"><strong>ว่าด้วยเรื่องการต่อ Switch Input</strong></h2>
+<figure>
+  <img alt="MCU Architecture" src="../images/switchinput.png" width="500" />
+  <figcaption>Input แบบต่างๆ</figcaption>
+</figure>
+<figure>
+  <img alt="MCU Architecture" src="../images/opto.png" width="500" />
+  <figcaption>ใช้ Opto เป็น Input ก็ได้</figcaption>
+</figure>
+<h2 id="7-segment">7-Segment</h2>
+<p>ตัวเลข ที่เราคุ้นเคย ใน example ใช้ <code>BusOut</code> แต่ต้องโน้ตไว้อย่างนึงว่า Ouput Pin แต่ละ Pin มีค่าความต้านทานภายใน 100Ω และ LED Segment มีแรงดันตกคร่อมประมาณ 1.8V เพราะงั้นเวลาคำนวนกระแสต้องคิดค่า R ภายในด้วยเช่นถ้า </br>
+I = 5mA </br>
+Vled = 1.8V </br>
+Vpin = 3.3V </br>
+Rinternal = 100Ω</br>
+ดังนั้น R จะเท่ากับ ((3.3 - 1.8) / 5m) - 100 = ___Ω</p>
+<pre><code class="language-C">/*Program Example 3.7: Simple demonstration of 7-segment display. Display
+digits 0, 1, 2, 3 in turn.
+*/
+#include &quot;mbed.h&quot;
+BusOut display(p5,p6,p7,p8,p9,p10,p11,p12); // segments a,b,c,d,e,f,g,dp
+int main() {
+    while(1) {
+        for(int i=0; i&lt;4; i++) {
+            switch (i){
+                case 0: display = 0x3F; break; //display 0
+                case 1: display = 0x06; break; //display 1
+                case 2: display = 0x5B; break;
+                case 3: display = 0x4F; break;
+            } //end of switch
+            wait(0.2);
+        } //end of for
+    } //end of while
+}
+</code></pre>
+<h2 id="control-larger-load">Control Larger Load</h2>
+<p>ใช้ BJT หรือ MOSFET</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/largeLoad.png" width="500" />
+  <figcaption>Large Load Control</figcaption>
+</figure>
+<p>แต่มีข้อระวังตอนขับโหลดที่เป็นแบบ Inductive ex. Motor เพราะว่าถ้าตัดไฟจาก Load ประเภท Inductive จะทำให้เกิดสิ่งที่เรียกว่า Back EMF ซึ่งจะทำให้เกิดแรงดันจำนวนมหาศาล ซึ่งอาจจะทำลาย Transistor หรือ MOSFET เราได้</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/inductive_load.png" width="500" />
+  <figcaption>Flyback Diode</figcaption>
+</figure>
+<h1 id="chapter-4-analog-output">Chapter 4 : Analog Output</h1>
+<h3 id="dac-digital-to-analog-converter">DAC (Digital to Analog Converter)</h3>
+<p>Basicly convert <strong>binary input</strong> to <strong>analog output</strong></p>
+<figure>
+  <img alt="MCU Architecture" src="../images/dac.png" width="500" />
+  <figcaption>DAC Block Diagram</figcaption>
+</figure>
+<p>Output Voltage of DAC are determined by</p>
+<p><span class="arithmatex">\(Vo = \dfrac{D * V_{ref}}{2^n}\)</span> </br>
+Vo : Output Voltage </br>
+D : Digital Input </br>
+Vref : Reference Voltage </br>
+n : Number of bits </br></p>
+<p>In LPC1768 has 10-bit DAC ก็คือ <span class="arithmatex">\(2^{10}\)</span> หรือก็คือ 1024 steps นั่นแหละ</p>
+<p>AnalogOut Example</p>
+<pre><code class="language-C">/*Program Example 4.1: Three values of DAC are output in turn on
+Pin 18. Read the output on a DVM.
+*/
+#include &quot;mbed.h&quot;
+AnalogOut Aout(p18); //create an analog output on pin 18
+int main() {
+  while(1) {
+    Aout=0.25; // 0.25*3.3V = 0.825V
+    wait(2);
+    Aout=0.5; // 0.5*3.3V = 1.65V
+    wait(2);
+    Aout=0.75; // 0.75*3.3V = 2.475V
+    wait(2);
+  }
+}
+</code></pre>
+<p>นอกจากนี้ยังมี <code>write</code> <code>write_u16</code> <code>read</code> และ Operator <code>=</code> เพื่อใช้สำหรับอ่านและเขียนค่าไปที่ <code>AnalogOut</code> ด้วย</p>
+<h2 id="pwm-pulse-width-modulation">PWM (Pulse Width Modulation)</h2>
+<p>Basicly Square Wave with variable <strong>On-Time</strong> and the ratio of On:Off time is called <strong>Duty Cycle</strong>
+<img alt="pwm" src="../images/pwm.gif" />
+ถ้าอยากได้แรงดัน Analog จาก PWM สามารถใช้วงจรในการเฉลี่ยค่าของ Pulse ได้เช่น RC Low pass filter</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/rc.png" width="500" />
+  <figcaption>RC Lowpass filter circuit</figcaption>
+</figure>
+<h3 id="pwm-on-mbed">PWM on MBED</h3>
+<p>MBED LPC1768 has <strong>6</strong> PWM Output on pins 21-26</p>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PwmOut</code></td>
+<td>Create Object</td>
+</tr>
+<tr>
+<td><code>write</code></td>
+<td>Set duty cycle 0.0-1.0</td>
+</tr>
+<tr>
+<td><code>read</code></td>
+<td>Get current Duty Cycle</td>
+</tr>
+<tr>
+<td><code>period</code></td>
+<td>Set PWM Period in <strong>seconds</strong></td>
+</tr>
+<tr>
+<td><code>period_ms</code></td>
+<td>Set PWM period in <strong>milliseconds</strong></td>
+</tr>
+<tr>
+<td><code>period_us</code></td>
+<td>Set PWM period in <strong>microseconds</strong></td>
+</tr>
+<tr>
+<td><code>pulsewidth</code></td>
+<td>Set PWM Pulse Width in <strong>seconds</strong></td>
+</tr>
+<tr>
+<td><code>pulsewidth_ms</code></td>
+<td>Set PWM Pulse Width in <strong>milliseconds</strong></td>
+</tr>
+<tr>
+<td><code>pulsewidth_us</code></td>
+<td>Set PWM Pulse Width in <strong>microseconds</strong></td>
+</tr>
+<tr>
+<td>operator <strong>=</strong></td>
+<td>Shorthand for <code>write</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="language-C">/*Sets PWM source to fixed frequency and duty cycle. Observe output on
+oscilloscope.
+*/
+#include &quot;mbed.h&quot;
+PwmOut PWM1(p21); //create a PWM output called PWM1 on pin 21
+int main() {
+  PWM1.period(0.010); // set PWM period to 10 ms
+  PWM1=0.5; // set duty cycle to 50%
+}
+</code></pre>
+<p><strong>ใช้ Software Generated PWM ก็ได้นะ</strong></p>
+<pre><code class="language-C">/*Program Example 4.6: Software generated PWM. 2 PWM values generated in turn, with
+full on and off included for comparison.
+*/
+#include &quot;mbed.h&quot;
+DigitalOut motor(p6);
+int i;
+int main() {
+while(1) {
+  motor = 0; //motor switched off for 5 secs
+  wait (5);
+  for (i=0;i&lt;5000;i=i+1) { //5000 PWM cycles, low duty cycle
+      motor = 1;
+      wait_us(400); //output high for 400us
+      motor = 0;
+      wait_us(600); //output low for 600us
+    }
+    for (i=0;i&lt;5000;i=i+1) { //5000 PWM cycles, high duty cycle
+      motor = 1;
+      wait_us(800); //output high for 800us
+      motor = 0;
+      wait_us(200); //output low for 200us
+    }
+    motor = 1; //motor switched fully on for 5 secs
+    wait (5);
+  }
+}
+</code></pre>
+<h2 id="servo-control">Servo Control</h2>
+<p>เอาง่ายๆ สัญญาณ Control เป็น Pulse ที่มี Period 20ms และ width ตั้งแต่ 1-2ms represent 0-180 องศา</p>
+<h1 id="chapter-5-analog-input">Chapter 5 : Analog Input</h1>
+<h2 id="adc-analog-to-digital-converter">ADC (Analog to Digital Converter)</h2>
+<p>Basicly Analog in Digital Out ใช้วัดแรงดัน โดยจะวัดเทียบกับแรงดัน Reference Voltage โดยที่จะมีเสปคประมาณนี้</br>
+1. Range is มันวัดได้เยอะแค่ไหน often minimum is 0V and Maximum value is <span class="arithmatex">\(V_{ref}\)</span> </br>
+2. Resolution วัดได้ละเอียดแค่ไหน ปกติก็จำนวนเป็น bits เช่นถ้า 10 bits ก็จะวัดได้ <span class="arithmatex">\(2^{10} = 1024\)</span> Steps และก็เอามาเทียบกับ Range ก็จะได้ Resolution = <span class="arithmatex">\(\dfrac{V_{ref}}{2^n}\)</span> </br>
+3. Quantisation คือ Error ที่อยู่ระหว่างแต่ละ Step คำนวนจาก Resolution / 2 เช่น 3.3V 8bit แต่ละ Step ก็จะเท่ากับ <span class="arithmatex">\(\dfrac{3.3}{256}=12.89mV\)</span> แล้วก็ <span class="arithmatex">\(\div2\)</span> จะได้ <span class="arithmatex">\(6.45mV\)</span></br></p>
+<figure>
+  <img alt="MCU Architecture" src="../images/quantisation.png" width="500" />
+  <figcaption>Quantisation Error</figcaption>
+</figure>
+<h2 id="daq-data-acquisition-system">DAQ (Data Acquisition System)</h2>
+<p>เอาง่ายๆคือเป็นเหมือน Environment ที่มาอยู่รอบๆ ADC เช่น </br> 
+- ก่อนจะวัดก็ต้องมีตัวแปลงสัญญาณนั้นให้เป็นสัญญาณไฟฟ้าซะก่อน เรียกว่า Transducer เช่น Microphone แปลงจาก Audio -&gt; Electrical Signal</br>
+- ถ้าต้องการวัดสัญญาณหลายที่ในรูปจะมี Multiplexer ไว้เลือกสัญญาณเข้า </br></p>
+<figure>
+  <img alt="MCU Architecture" src="../images/daq.png" width="500" />
+  <figcaption>Data Acquisition System</figcaption>
+</figure>
+<h2 id="sampling-frequency-and-aliasing">Sampling Frequency and Aliasing</h2>
+<p>Sampling Frequency ก็คือว่าเราอ่านข้อมูลถี่แค่ไหน จบ </br>
+และก็มี Nyquist Frequency ก็คือต้องมีค่าอย่างน้อย <strong>2 เท่า</strong>ของสัญญาณที่ต้งการวัด</p>
+<h2 id="analog-input-with-mbed">Analog Input with mbed</h2>
+<p>LPC1768 has <strong>Single ADC</strong> with multiplexer and has reference voltage of 3.3V</p>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AnalogIn</code></td>
+<td>Create analog Object</td>
+</tr>
+<tr>
+<td><code>reead</code></td>
+<td>Read input voltage range from 0.0-1.0</td>
+</tr>
+<tr>
+<td><code>read_u16</code></td>
+<td>Read in unsigned short in the range (0x0 - 0xFFFF)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="language-C">/*This Program is basically a very slow Voltage Buffer
+*/
+#include &quot;mbed.h&quot;
+AnalogOut Aout(p18); //defines analog output on Pin 18
+AnalogIn Ain(p20) //defines analog input on Pin 20
+int main() {
+  while(1) {
+    Aout=Ain; //transfer analog in value to analog out, both
+  }
+}
+</code></pre>
+<pre><code class="language-C">/*Program Example 5.2: Uses analog input to control PWM duty
+cycle, fixed period
+*/
+#include &quot;mbed.h&quot;
+PwmOut PWM1(p23);
+AnalogIn Ain(p20); // defines analog input on Pin 20
+int main() {
+  while(1){
+    PWM1.period(0.010); // set PWM period to 10 ms
+    PWM1=Ain; // Analog in value becomes PWM duty,
+    // both are type float
+    wait(0.1);
+  }
+}
+</code></pre>
+<h2 id="display-value-to-the-computer">Display Value to the computer</h2>
+<p>ใช้ Putty เถอะครับ เพื่อเปิด Serial Terminal</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/puttyPlease.png" width="500" />
+  <figcaption>Doesn't MACs has Putty?</figcaption>
+</figure>
+<p>ใช้ Object <code>Serial</code> ในการส่งข้อมูล มี Constant น่าสนใจคือ <code>USBTX</code> และ <code>USBRX</code> ซึ่งเป็นขาทีี่ต้องอยู่กับ MCU ที่ Bridge ระหว่าง USB กับ LPC1768</p>
+<pre><code class="language-C">/*Program Example 5.4: Reads input voltage through the ADC, and transfers to PC
+terminal
+
+*/
+
+#include &quot;mbed.h&quot;
+Serial pc(USBTX, USBRX); //enable serial port which links to USB
+AnalogIn Ain(p20);
+float ADCdata;
+int main() {
+  pc.printf(&quot;ADC Data Values...\n\r&quot;); //send an opening text message
+  while(1){
+    ADCdata=Ain;
+    wait(0.5);
+    pc.printf(&quot;%1.3f \n\r&quot;,ADCdata); //send the data to the terminal
+  }
+}
+</code></pre>
+<p>การปริ้นค่าสามารถใช้ <code>pc.printf("abc %d",variable)</code> ได้เลย</p>
+<h2 id="simple-analog-sensor">Simple Analog sensor</h2>
+<figure>
+  <img alt="MCU Architecture" src="../images/ldr.png" width="500" />
+  <figcaption>LDR Sensor</figcaption>
+</figure>
+<figure>
+  <img alt="MCU Architecture" src="../images/lm35.png" width="500" />
+  <figcaption>LM35 Temperature Sensor</figcaption>
+</figure>
+<p>Exploring Conversion Timing</p>
+<pre><code class="language-C">/*Program Example 5.5: Inputs signal through ADC, and outputs to DAC. View DAC
+output on oscilloscope. To demonstrate Nyquist, connect variable frequency signal
+generator to ADC input. Allows measurement of conversion times, and explores
+Nyquist limit. */
+#include &quot;mbed.h&quot;
+AnalogOut Aout(p18); //defines analog output on Pin 18
+AnalogIn Ain(p20); //defines analog input on Pin 20
+DigitalOut test(p5);
+float ADCdata;
+int main() {
+  while(1) {
+    ADCdata=Ain; //starts A-D conversion, and assigns analog value to ADCdata
+    test=1; //switch test output, as time marker
+    test=0;
+    Aout=ADCdata; // transfers stored value to DAC, and forces a D-A conversion
+    test=1; //a double pulse, to mark the end of conversion
+    test=0;
+    test=1;
+    test=0;
+    //wait(0.001); //optional wait state, to explore different cycle times
+  }
+}
+</code></pre>
+<p>เอาง่ายๆเลย โค้ดนี้อ่านค่า Analog เก็บไว้ในตัวแปร กระพริบ 1 pulse แล้วเอาค่านั้นไปเข้า DAC จากนั้นกระพริบ 2 ครั้งแล้วอ่านใหม่
+<strong>แล้วทำไมไม่จ่าย High ตอนเริ่ม Low ตอนจบวะ!!!</strong></p>
+<h1 id="chapter-7-serial-communication">Chapter 7 Serial Communication</h1>
+<p>มัน Serial (อนุกรม) เพราะมันส่งข้อมูลทีละ 1 bit ถึงจะช้ากว่า Parallel แต่ก็ดีกว่าในเรื่องใช้สายน้อย</p>
+<p>มี 2 แบบคือ Synchronous กับ Asynchronous Serial</p>
+<ol>
+<li>Asynchronous Serial ก็คือ Serial Link ที่ส่งแล้วอาศัยการนับ Timing ของฝั่งส่งและฝั่งรับด้วยตัวเอง เพราะงั้นต้องคุยกันก่อนว่าจะส่งด้วยความเร็วแค่ไหน</li>
+<li>Synchronous Serial ก็คือ Serial ที่มี clock เพื่อใช้ในการ Synchroni<strong>z</strong>ed Frame ของข้อมูล</li>
+</ol>
+<p><strong>Basics of Serial Port</strong> : the shift register จริงๆก็แค่รับสัญญาณ Clock และ Data ที่เป็น Serial แล้วแปลงออกมาให้เป็น Parallel</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/SIPO.png" width="500" />
+  <figcaption>Serial in Parallel Out</figcaption>
+</figure>
+<p><strong>A Simple Serial Link</strong> อันนี้คือ Synchronous Link ที่มีแค่ Clock, TX (SDO), RX(SDI) ปกติจะต่อจากขาส่งไปรับ และจากขารับไปส่งแต่จะมี Role เข้ามาเกี่ยวข้องคือ Slave กับ Master ซึ่งก็ต่างกันแค่ Master เป็นคน Generate สัญญาณ Clock (เพราะงั้นถ้า Master ไม่ถาม Slave ไม่ต้องพูดดด)</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/serialLink.png" width="500" />
+  <figcaption>Simple Serial Link</figcaption>
+</figure>
+<h2 id="spi-serial-peripheral-interface">SPI (Serial Peripheral Interface)</h2>
+<p>Created by <strong>Motorola</strong> and <strong>National Semiconductors</strong> การเชื่อมต่อมี Clock, Data In, Data Out และ Slave Select (SS) ก็คือมี Slave กี่ตัวก็ต่อ SS ไปเท่านั้นเลยอ่ะนะ
+<img alt="SPI" src="../images/SPI.png" /></p>
+<p><strong>SPI on mbed : Master</strong> 
+MBED มี SPI อยู่ 2 Port โดยแต่ละอันจะตั้งเป็น Master หรือ Slave ก็ได้</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPI(mosi, miso, sclk)</code></td>
+<td>Create SPI Master and configure the Pin</td>
+</tr>
+<tr>
+<td><code>format(bit,mode)</code></td>
+<td>configure data mode and data length</td>
+</tr>
+<tr>
+<td><code>frequency(hz)</code></td>
+<td>Set SPI Clock Frequency</td>
+</tr>
+<tr>
+<td><code>write(data)</code></td>
+<td>Write to the SPI Slave and return the response</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="MBED SPI" src="../images/mbed_spi.png" width="300" /></br></p>
+<p>ปกติ SPI จะมี Mode การทำงานอยู่ 4 โหมด (โหมดบอกว่าสัญญาณจะถูกอ่านที่ขาขึ้นหรือลง และบอกว่า Idle Clock เป็น High หรือ Low) ถ้าให้จำง่ายๆ</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Idle Clock</th>
+<th>อ่านสัญญาณตอนไหน</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>&#8593; ขึ้น</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>&#8595; ลง</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>&#8593; ขึ้น</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>&#8595; ลง</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="SPI Mode" src="../images/SPI_Mode.png" width="800" /></p>
+<p><strong>SPI Master Example</strong></p>
+<pre><code class="language-C">#include &quot;mbed.h&quot;
+SPI ser_port(p11, p12, p13); // mosi, miso, sclk
+char switch_word ; //word we will send
+int main() {
+  ser_port.format(8,0); // Setup the SPI for 8 bit data, Mode 0 operation
+  ser_port.frequency(1000000); // Clock frequency is 1MHz
+  while (1){
+    switch_word = 0xA1; //set up word to be transmitted
+    int readBack = ser_port.write(switch_word); //send switch_word and read in readBack
+    wait_us(50);
+  }
+}
+</code></pre>
+<h3 id="spi-on-mbed-slave"><strong>SPI on mbed : Slave</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Functions</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPISlave(mosi,miso,sck,ss)</code></td>
+<td>Create a SPI slave connected to the specified pins</td>
+</tr>
+<tr>
+<td><code>format(bit,mode)</code></td>
+<td>Configure the data transmission format</td>
+</tr>
+<tr>
+<td><code>frequency(hz)</code></td>
+<td>Set clock Frequency (เพื่อ?)</td>
+</tr>
+<tr>
+<td><code>receive()</code></td>
+<td>Flag ว่ามีข้อมูลมามั้ย</td>
+</tr>
+<tr>
+<td><code>read()</code></td>
+<td>Return data</td>
+</tr>
+<tr>
+<td><code>reply()</code></td>
+<td>ถ้ารอบหน้า Master ทักมาจะตอบว่าไงมั้ย</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADXL345</strong> Accelerometer
+<img alt="alt text" src="../images/ADXL345.png" /></p>
+<p><strong>Evaluating SPI</strong></p>
+<p>ข้อดี</p>
+<ul>
+<li>เร็ว</li>
+<li>ถูก</li>
+<li>มีประสิทธิภาพ</li>
+</ul>
+<p>ข้อเสีย</p>
+<ul>
+<li>ไม่มีการ Ack ไม่รู้ว่าส่งไปเขาได้รับครบถูกมั้ย</li>
+<li>ไม่มี Addressing เพราะงั้นต้องใช้ SS Line สำหรับทุก Slave</li>
+<li>ไม่มี Error Checking ก็ถ้ามีการรบกวนคือไม่มีทางรู้</li>
+</ul>
+<h2 id="i2c-inter-integrated-circuit">I2C (Inter-Integrated Circuit)</h2>
+<p>I2C เป็น Serial แบบ Master/Slave อยู่ มีสาย 2 เส้นคือ SCL/SDA (Clock, Data) แบบ Open-Collector ซึ่งจะมี Pullup Resistor ก็คือแต่ละ Node จะ Force Bus เป็น 0 ได้แต่ Force ให้เป็น 1 ไม่ได้</p>
+<p>และแน่นอน พอเป็น Master/Slave ก็จะทำให้ Master ต้องเป็นคนเริ่ม Transfer data (Master ไม่ขอก็ให้ Slave อยู่เงียบๆ)</p>
+
+<p><img alt="alt text" src="../images/I2C_BUS.png" /></p>
+<p>Start Condition เริ่มตอน SDA&#8595; ตอนที่ SCL ยัง High<br/>
+Stop Condition เริ่มตอน SDA&#8593; ตอนที่ SCL ยัง High<br/></p>
+<p>ตอนส่งข้อมูลจะเริ่มด้วย (7-bits) Address ก่อนแล้วตามด้วย <span class="arithmatex">\(Read/\overline{Write}\)</span> Bit จากนั้น Slave จะ ACK แล้วเริ่มส่งข้อมูล</p>
+<p>Address ของ I2C เป็น Address แบบ 7 bits แต่ตอนส่งต้อง left shift ไป 1 (เพื่อ Reserved Bit ซ้ายสุดไว้สำหรับ <span class="arithmatex">\(R/\overline{W}\)</span> ยังไงล่ะ)</p>
+<p>ปกติข้อมูลจะส่งเป็น Byte จะส่งกี่ Byte ก็ได้ ไม่มี Limit แต่จะมี 1 bit acknowledge ทุก Byte ที่ส่ง</p>
+
+<p><img alt="alt text" src="../images/i2c_frame.png" /></p>
+<h3 id="i2c-on-mbed"><strong>I2C on mbed</strong></h3>
+<p>MBED มี SPI อยู่ 2 Port โดยแต่ละอันจะตั้งเป็น Master หรือ Slave ก็ได้</p>
+<figure>
+  <img alt="MCU Architecture" src="../images/i2c_function.png" width="500" />
+  <figcaption>I2C Function (แคปละกันเริ่มไม่ไหวละ)</figcaption>
+</figure>
+<pre><code class="language-C">uint8_t address; // Slave Address
+I2C i2c_port(p9, p10); // P9 = SDA, P10 = SCL
+
+// ถ้าจะ Write จะเขียนแบบนี้
+i2c_port.start();
+i2c_port.write(address &lt;&lt; 1);
+i2c_port.write(data);
+i2c_port.stop();
+
+// ถ้าจะ Read จะเขียนแบบนี้
+i2c_port.start();
+i2c_port.write(address &lt;&lt; 1 | 0x01); // ต้องเติม 1 เข้าไปที่ท้าย address เพื่อระบุว่าเป็น Read
+int read = i2c_port.read(); // อยากได้หลาย Byte ก็ For เอามั้ง555
+i2c_port.stop();
+</code></pre>
+<p>ข้อดีคือ <strong>Reliable</strong></p>
+<p>ข้อเสียคือ<strong>ช้า</strong></p>
+<h2 id="asynchronous-serial">Asynchronous Serial</h2>
+<p>ด้วยความ Asynchronous แน่นอน ไม่ต้องการ Clock แต่ความเร็วต้องตกลงกันก่อนนะ ไม่งั้นคุยกันไม่รู้เรื่อง ในแต่ละ Byte/Word จะมี Start และ Stop Bit</p>
+<p>การสื่อารแบบนี้เรียกว่า UART (Universla Asynchronous Receiver/Transmitter) มีสาย 1 เส้นเพื่อส่ง(TX) และ 1 เส้นเพื่อรับ(RX)</p>
+<h3 id="uart-on-mbed">UART on mbed</h3>
+<p>MBED มี UART อยู่ 4 ช่องตามนี้ (อันที่เขียนว่า Serial)</p>
+<p><img alt="alt text" src="../images/lpc1768_pinout.png" /></p>
+<p><img alt="alt text" src="../images/uart_function.png" /></p>
+<p>ถ้าจะต่อกับ PC จะมี Constant ที่ใช้กำหนดใน Serial ได้คือ <code>USBTX</code> <code>USBRX</code> ก็จะใช้ประมาณนี้ <code>Serial pc(USBTX,USBRX)</code></p>
+<h2 id="usb-universal-serial-bus">USB (Universal Serial Bus)</h2>
+<p>ก็ตามชื่อ Universal ถอดเสียบโดยไม่ต้องตั้งค่าอะไร (Plug and Play)</p>
+<p>บอร์ด MBED มี USB 2 Port แต่มี Peripheral แค่พอร์ตเดียวนะครับ อันนึงเอาไว้โปรแกรม,จ่ายไฟและ Serial ส่วนอีกอันสามารถใช้เป็น USB Device ได้</p>
+<p><img alt="alt text" src="../images/mbed_arch.png" /></p>
+<p>USB ทำตัวเป็น Mouse, Keyboard, Serial, MIDI, Audio, USBMSD</p>
+<p><img alt="alt text" src="../images/usb_function.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
