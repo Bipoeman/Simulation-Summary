@@ -14,10 +14,10 @@
 
 ## Queing Notation
 
-<figure markdown="span" align="center">
-<img src="/images/queue_component.png" width="400"></img>
-<figcaption>Components of a Queue</figcaption>
-</figure>
+<p align="center">
+<img src="/images/queue_component.png" width="400"></img><br/>
+Components of a Queue
+</p>
 
 ##### 1. Arrival Process
 - Interarrival times $\tau_j=t_j-t_{j-1}$ (เวลาห่างกันเท่าไหร่)
