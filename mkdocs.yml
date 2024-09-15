@@ -2,9 +2,9 @@ site_name: Simulation Summary
 theme:
   name: mkdocs
   font:
-    text: Itim
+    text: K2D
 nav:
-  - Midterm: midterm.md
+  - Chapter 30: index.md
   # - Home: index.md
 markdown_extensions:
   - attr_list
@@ -16,3 +16,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - style.css
