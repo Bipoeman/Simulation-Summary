@@ -15,7 +15,7 @@
 ## Queing Notation
 
 <p align="center">
-<img src="/images/queue_component.png" width="400"></img><br/>
+<img src="images\queue_component.png" width="400"></img><br/>
 Components of a Queue
 </p>
 
@@ -93,7 +93,7 @@ Components of a Queue
 - The variable takes $i^{th}$ value with prob $p_i$
 
 <figure markdown="span" align="center">
-<img src="/images/hyper_exponential.png" height="200"></img>
+<img src="images\hyper_exponential.png" height="200"></img>
 <figcaption>Hyper Exponential</figcaption>
 </figure>
 $x_i$ is exponentially distributed with mean $a_i$
