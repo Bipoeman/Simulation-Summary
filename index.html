@@ -60,6 +60,34 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#queing-notation" class="nav-link">Queing Notation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exponential-distribution" class="nav-link">Exponential Distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#erlang-distribution" class="nav-link">Erlang Distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#hyper-exponential-distribution" class="nav-link">Hyper-Exponential Distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#group-arrivalsservice" class="nav-link">Group Arrivals/Service</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#key-variables-used-in-analysis-of-single-queue" class="nav-link">Key Variables used in Analysis of Single Queue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#rules-of-all-queues" class="nav-link">Rules of all Queues</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -75,7 +103,181 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Itim&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"></p>
 <h2 id="queing-in-a-nutshell">Queing in a nutshell</h2>
-<p>ก็คือ</p></div>
+<p>ไว้คอยบอกเวลาที่ใช้ในแต่ละ Queue</p>
+<ul>
+<li>Many jobs shares <strong>system resources</strong></li>
+<li>One job at anytime others wait</li>
+</ul>
+<h2 id="queing-notation">Queing Notation</h2>
+<figure align="center">
+<img src="/images/queue_component.png" width="400"></img>
+<figcaption>Components of a Queue</figcaption>
+</figure>
+<h5 id="1-arrival-process">1. Arrival Process</h5>
+<ul>
+<li>Interarrival times <span class="arithmatex">\(\tau_j=t_j-t_{j-1}\)</span> (เวลาห่างกันเท่าไหร่)</li>
+<li><span class="arithmatex">\(\tau_j=t_j-t_{j-1}\)</span> assumed to be Independent and Identically Distributed <strong>(IID)</strong></li>
+<li><strong>Piosson Arrival</strong> is common and interarrival times are <strong>IID</strong> and <strong>Exponentially distributed</strong></li>
+<li>Also <strong>Erlang</strong> and <strong>Hyperexponential</strong> used</li>
+</ul>
+<h5 id="2-service-time-distribution">2. Service Time Distribution</h5>
+<ul>
+<li>Ex. Service Time = Time each student spends at the terminal</li>
+<li>Assumed that Service time are random variable and IID</li>
+<li><strong>Exponential Distribution</strong> is commonly used</li>
+<li>Erlang, hyperexponential and general can also be used</li>
+</ul>
+<h5 id="3-number-of-servers">3. Number of Servers (ตัวประมวลผล)</h5>
+<ul>
+<li>Part of <strong>same queing system</strong></li>
+<li>Identical ex any student to any terminal</li>
+<li>if <strong>not identical</strong> then group identical with <strong>seperate queue</strong> so each group is a queing system</li>
+</ul>
+<h5 id="4-system-capacity">4. System Capacity</h5>
+<ul>
+<li>Number of students can stay in the room (buffer)</li>
+<li>Capacity is <strong>finite</strong> (for most system) but if large, easier to <strong>assume infinite</strong></li>
+</ul>
+<h5 id="5-population-size">5. Population Size</h5>
+<ul>
+<li>Number of potential student who can use the computer</li>
+<li>Population is <strong>finite</strong> (for most system) again, if large, it's easier to <strong>assume infinite</strong></li>
+</ul>
+<h5 id="6-service-discipline">6. Service Discipline</h5>
+<ul>
+<li>Order which the students are served<ul>
+<li>FCFS : First Come First Served</li>
+<li>LCFS : Last Come First Served</li>
+<li>LCFS-PR : Last Come First Serve with Preempt and Resume</li>
+<li>RR : Round Robin</li>
+<li>PS : Processing Sharing (Small Quantum)</li>
+<li>IS : Infinite Server = Fixed delay</li>
+<li>SPT : Shorting Processing Time first</li>
+<li>SRPT : Shorting remaining Processing time first</li>
+<li>SEPT : Shortest Expected Processing Time first</li>
+<li>SERPT : Shortest Expected Remaining Processing Time first</li>
+<li>LVFS : Loudest Voice First Served</li>
+</ul>
+</li>
+</ul>
+<h3 id="kendall-notation-asmbksd">Kendall notation <span class="arithmatex">\(A/S/m/B/K/SD\)</span></h3>
+<ul>
+<li><span class="arithmatex">\(A\)</span> : interarrival time distribution</li>
+<li><span class="arithmatex">\(S\)</span> : Service time distribution<ul>
+<li><span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(S\)</span> Can be denoted by one-letter symbol as follows<ul>
+<li><span class="arithmatex">\(M\)</span> : Exponential</li>
+<li><span class="arithmatex">\(E_k\)</span> : Erlang with parameter k</li>
+<li><span class="arithmatex">\(H_k\)</span> : Hyperexponential with parameter k</li>
+<li><span class="arithmatex">\(D\)</span> : Deterministic</li>
+<li><span class="arithmatex">\(G\)</span> : General</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(m\)</span> : number of servers</li>
+<li><span class="arithmatex">\(B\)</span> : number of buffers</li>
+<li><span class="arithmatex">\(K\)</span> : Population size</li>
+<li><span class="arithmatex">\(SD\)</span> : Service discipline</li>
+</ul>
+<h2 id="exponential-distribution">Exponential Distribution</h2>
+<ul>
+<li>Probability Density Function (pdf)<ul>
+<li><span class="arithmatex">\(f(x)=\frac{1}{a}e^{\frac{-x}{a}}\)</span></li>
+</ul>
+</li>
+<li>Cumulative Distribution Function (cdf)<ul>
+<li><span class="arithmatex">\(F(x) = P(X&lt;x) = \int_{0}^{x}f(x)dx=1-e^{-x/a}\)</span></li>
+</ul>
+</li>
+<li>Mean : <span class="arithmatex">\(a\)</span></li>
+<li>Variance : <span class="arithmatex">\(a^2\)</span></li>
+<li>Coefficient of variation (CV) = SD / mean = 1</li>
+<li><strong>Memoryless</strong> ไม่สนอดีต<ul>
+<li><strong>Expected time</strong> of next arrival is always <span class="arithmatex">\(a\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="erlang-distribution">Erlang Distribution</h2>
+<ul>
+<li>Sum of <span class="arithmatex">\(k\)</span> exponential random variables<ul>
+<li><span class="arithmatex">\(X=\sum_{i=1}^k x_i\)</span> where <span class="arithmatex">\(x_i\)</span> ~ exponential</li>
+</ul>
+</li>
+<li>pdf<ul>
+<li><span class="arithmatex">\(f(x) = \frac{x^{k-1}e^{-x/a}}{(k-1)! a^k}\)</span></li>
+</ul>
+</li>
+<li>Expected Value : <span class="arithmatex">\(ak\)</span></li>
+<li>Variance : <span class="arithmatex">\(a^2k\)</span></li>
+<li>CV : <span class="arithmatex">\(\frac{1}{\sqrt{k}}\)</span></li>
+</ul>
+<h2 id="hyper-exponential-distribution">Hyper-Exponential Distribution</h2>
+<p>(คือไรไม่รู้อ่านก็ไม่รู้เรื่อง)</p>
+<ul>
+<li>The variable takes <span class="arithmatex">\(i^{th}\)</span> value with prob <span class="arithmatex">\(p_i\)</span></li>
+</ul>
+<p><figure markdown="span" align="center">
+<img src="/images/hyper_exponential.png" height="200"></img></p>
+<figcaption>Hyper Exponential</figcaption>
+<p></figure>
+<span class="arithmatex">\(x_i\)</span> is exponentially distributed with mean <span class="arithmatex">\(a_i\)</span></p>
+<ul>
+<li>Higher variance then exponential (CV &gt; 1)</li>
+</ul>
+<h2 id="group-arrivalsservice">Group Arrivals/Service</h2>
+<ul>
+<li>Buld arrival/service</li>
+<li><span class="arithmatex">\(M^{x}\)</span> : <span class="arithmatex">\(x\)</span> represents the group size</li>
+<li><span class="arithmatex">\(G^{x}\)</span> : <span class="arithmatex">\(x\)</span> a bulk arrival or service process with general inter-group times</li>
+</ul>
+<h2 id="key-variables-used-in-analysis-of-single-queue">Key Variables used in Analysis of Single Queue</h2>
+<ul>
+<li><span class="arithmatex">\(E\)</span> : Expected (mean)</li>
+<li><span class="arithmatex">\(\lambda\)</span> : arrival rate = <span class="arithmatex">\(1/E[\tau]\)</span></li>
+<li><span class="arithmatex">\(s\)</span> : Service time per job</li>
+<li><span class="arithmatex">\(\mu\)</span> : Mean of service rate per server = <span class="arithmatex">\(1/E[s]\)</span></li>
+<li><span class="arithmatex">\(n\)</span> : queue length</li>
+<li><span class="arithmatex">\(n_q\)</span> : Number of jobs waiting</li>
+<li><span class="arithmatex">\(n_s\)</span> : Number of jobs reqceiving service</li>
+<li><span class="arithmatex">\(r\)</span> : response time = time waiting + time receiving service</li>
+<li><span class="arithmatex">\(w\)</span> : waiting time = Time between arrival and beginning of service</li>
+</ul>
+<h2 id="rules-of-all-queues">Rules of all Queues</h2>
+<h4 id="rules-that-apply-to-ggm-queues">Rules that apply to G/G/m Queues</h4>
+<h6 id="1-stability-condition-lambda-mmu">1. Stability Condition : <span class="arithmatex">\(\lambda &lt; m\mu\)</span></h6>
+<blockquote>
+<p><span class="arithmatex">\(\lambda\)</span> : Mean arrival rate = <span class="arithmatex">\(1/E[\tau]\)</span> <br/>
+<span class="arithmatex">\(m\)</span> : number of servers <br/>
+<span class="arithmatex">\(\mu\)</span> : Mean service rate per server = <span class="arithmatex">\(1/E[s]\)</span> <br/></p>
+</blockquote>
+<p>finite-population or finite-buffer always <strong>stable</strong> <br/>
+infinite queue = <strong>instability</strong></p>
+<h6 id="2-number-in-system-vs-number-in-queue-nn_qn_s">2. Number in System VS Number in Queue : <span class="arithmatex">\(n=n_q+n_s\)</span></h6>
+<blockquote>
+<p><span class="arithmatex">\(n_q\)</span> : Number in Queue <br/>
+<span class="arithmatex">\(n_s\)</span> : Number Receiving service <br/>
+<span class="arithmatex">\(n\)</span> : Number of Jobs <br/></p>
+</blockquote>
+<p>Since it random <span class="arithmatex">\(E[n]=E[n_q]+E[n_s]\)</span></p>
+<h6 id="3-number-vs-time">3. Number VS Time</h6>
+<p>if jobs are not lost due to in sufficient buffers<br/></p>
+<blockquote>
+<p>Mean number of jobs in the <strong>system</strong> <br/>
+&nbsp;&nbsp;= arrival rate * mean <strong>response</strong> time <br/>
+&nbsp;&nbsp;= <span class="arithmatex">\(\lambda r\)</span> <br/></p>
+<p>Mean number of jobs in the <strong>queue</strong> <br/>
+&nbsp;&nbsp;= arrival rate * mean <strong>waiting</strong> time <br/>
+&nbsp;&nbsp;= <span class="arithmatex">\(\lambda w\)</span> <br/></p>
+</blockquote>
+<h6 id="4-time-in-system-vs-time-in-queue-rws">4. Time in System VS time in Queue <span class="arithmatex">\(r=w+s\)</span></h6>
+<blockquote>
+<p><span class="arithmatex">\(r\)</span>,<span class="arithmatex">\(w\)</span>,<span class="arithmatex">\(s\)</span> are random variables <br/>
+<span class="arithmatex">\(E[r] = E[w] + E[s]\)</span> <br/>
+if service rate is independent of number of jobs in the queue <br/>
+<span class="arithmatex">\(CV(w,s)=0\)</span> <br/>
+<span class="arithmatex">\(Var[r] = Var[w] + Var[s]\)</span> <br/></p>
+</blockquote>
+<p>ที่เหลือเดี๋ยวค่อยมาต่อ</p></div>
             </div>
         </div>
 
@@ -89,7 +291,6 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js"></script>
-        <script src="javascripts/mathjax.js"></script>
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="search/main.js"></script>
 
@@ -159,5 +360,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-09-15 15:42:07.686222+00:00
+Build Date UTC : 2024-09-15 17:17:56.473821+00:00
 -->
